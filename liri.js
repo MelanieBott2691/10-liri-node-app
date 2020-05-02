@@ -73,7 +73,21 @@ function searchSongs(search) {
 // Language of the movie.
 // Plot of the movie.
 // Actors in the movie.
-function findMovies(search) {
+function getMovieInfo() {
+    for (var i = 3; i < input.length; i++) {
+        if (i > 2 && i < input.length) {
+            movieName = movieName + " " + input[i];
+        }
+    }
+    // if movie name is not specified then show the movie info for Mr. Nobody
+    if (!movieName) {
+        movieName = "Mr. Nobody";
+        console.log(
+            "If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
+
+
+
+    }
     console.log("Looking for your movie....");
     if (!search) {
         search = "Mr. Nobody";
@@ -107,7 +121,7 @@ if (type === "concert-this") {
     fs.readFile("random.txt", function(err, data) {
         if (err) {
             return console.log(err);
-        };
+        }
         var dataArr = data.split(",");
         var dataAction = dataArr[0];
         var dataTerm = dataArr[1];
@@ -118,7 +132,7 @@ if (type === "concert-this") {
         } else if (dataAction === "movie-this") {
             findMovies(dataTerm);
         } else {
-            console.log("Error")
+            console.log("Error");
         }
     });
 } else {
