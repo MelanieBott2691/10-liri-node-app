@@ -4,181 +4,126 @@ require("dotenv").config();
 var keys = request("./keys");
 var request = require("request");
 var Spotify = require('node-spotify-api');
-var dataFormat = require("dataFormat");
+var spotify = new Spotify(keys.spotify);
+var axios = require("axios");
+var moment = require("moment");
 var fs = require("fs");
+var command = process.argv[2];
+var searchItem = "";
+var dataLine1;
+var dataLine2;
+var dataLine3;
+var dataLine4;
+var dataLine5;
+var dataLine6;
+var dataLine7;
+var dataLine8;
 
-//search the Bands in Town Artists Events
-var concertThis = function(artist) {
-    var region = "";
-    var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
-
-    request(queryURL, function(err, response, body) {
-        if (!err && response.statusCode === 200) {
-            var concertThis = JSON.parse(body)
-            outputData(artist + " concert information:");
-            for (i = 0; i < concertInfo.length; i++) {
-                region = concertInfo[i].venur.region;
-                if (region === "") {
-                    region = concertInfo[i].venue.country;
-                }
-                // render information about each event to the terminal
-                // Name of the venue
-                // Venue location
-                // Date of the Event (use moment to format this as "MM/DD/YYYY")
-
-                outputData("Venue: " + concertInfo[i].venue.name);
-                outputData("Location: " + concertInfo[i].venue.city + ", " + region);
-                outputData("Date: " + dateFormat(concertInfo[i].datetime, "mm/dd/yyyy"));
-            }
-        }
-    });
+var commandLine = "";
+for (i = 0; i < process.argv.length; i++) {
+    commandLine += (process.argv[i] + " ");
+};
+searchItem = searchItem.trim();
+switch (command) {
+    case "concert-this":
+        concertThis();
+        break;
+    case "spotify-this-song":
+        spotifyThis();
+        break;
+    case "movie-this":
+        movieThis();
+        break;
+    case "do-what-it-says":
+        doWhat();
+        break;
 };
 
-// This will show the following information about the song in the terminal/bash window
-// Artist(s)
-// The song's name
-// preview link of the song from Spotify
-// the album that the song is from
-// If no song is provided then your program will default to "The Sign" by Ace of Base
-var spotifyThisSong = function(song) {
-    if (!song) {
-        song = "The Sign Ace of Base"
+function concertThis() {
+    if (!searchItem) {
+        searchItem = " ";
     }
-    var spotify = new Spotify(keys.spotify);
-    spotify.search({ type: "track", query: song, limit: 1 }, function(err, data) {
+    request("https://rest.bandsintown.com/artists/" + searchItem + "/events?app_id=codingbootcamp", fucntion(error, response, bootcamp);
+        if (JSON.parse(body)[0] === undefined) {
+            console.log("The Sign")
+        } else {
+            dataLine1 = searchItem + " playing at " + JSON.parse(body)[0].venue
+        }
+    )
+}
+
+function spotifyThis() {
+    if (!searchItem) {
+        searchItem = "The Sign by Ace of Base";
+    }
+    spotify.search({ type: "track", query: searchItem }, function(err, response) {
         if (err) {
-            return console.log(err);
+            return console.log("Error occured: " + err);
         }
-        var songInfo = data.tracks.items[0];
-        outputData(song.Info.artist[0].name);
-        outputData(songInfo.name);
-        outputData(songInfo.album.name);
-        outputData(songInfo.preview_url);
+        dataLine1 = "\nArtist: " + JSON.stringify(response.tracks.items[0].artist[0].name);
+        dataLine2 = "\nSong Name: " + JSON.stringify(response.tracks.items[0].name.[0].name);
+        dataLine3 = "\nURL: " + JSON.stringify(response.tracks.items[0].album.artists[0].external_urls.spotify);
+        dataLine4 = "\nAlbum: " + JSON.stringify(response.tracks.items[0].album..[0].name);
 
+
+        console.log(dataLine1);
+        console.log(dataLine2);
+        console.log(dataLine3);
+        console.log(dataLine4);
+        logFile();
     });
 };
 
-// node liri.js movie-this '<movie name here>'
-// *Title of movie
-// *Year the movie came out
-// *IMDB Rating of the movie
-// *Rotten Tomatoes Rating of the movie
-// *Country where the movie was produced
-// *Langague of the movie
-// *Plot of the movie
-// *Actors in the movie
-
-// If user doesn't type in a movie, the program will output data for the movie "Mr. Nodbody"
-var movieThis = function(movie) {
-    if (!movie) {
-        movie = "Mr. Nobody";
+function movieThis() {
+    if (!searchItem) {
+        searchItem = "Mr. Nobody"
     }
-    var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
-    http: //www.omdbapi.com/?apikey=[yourkey]&
-        http: //img.omdbapi.com/?apikey=[yourkey]&
+    request("http://www.omdbapi.com/?t=" + searchItem + "&y=&plot=short&apikey=trilogy");
 
-        request(queryURL, function(err, response, body) {
-                if (!err && response.statusCode === 200) {
-                    var movieInfo = JSON.parse(body);
+    function(searchItem) {
+        if (!error && response.statusCode === 200) {
+            dataLine1("Title: " + JSON.parse(body).Title);
+            dataLine2("Release Date: " + JSON.parse(body).Year);
+            dataLine3("IMDB Rating: " + JSON.parse(body).imdbRating);
+            dataLine4("Rotten Tomatoes Rating: " + JSON.parse(body).Ratings);
+            dataLine5("Country Produced: " + JSON.parse(body).Country);
+            dataLine6("Langauge: " + JSON.parse(body).Language);
+            dataLine7("Plot: " + JSON.parse(body).Plot);
+            dataLine8("Actors: " + JSON.parse(body).Actors);
 
-                    // render information about each event to the terminal
-                    // *Title of movie
-                    // *Year the movie came out
-                    // *IMDB Rating of the movie
-                    // *Rotten Tomatoes Rating of the movie
-                    // *Country where the movie was produced
-                    // *Langague of the movie
-                    // *Plot of the movie
-                    // *Actors in the movie
-                    outputData("Venue: " + concertInfo[i].venue.name);
-                    outputData("Location: " + concertInfo[i].venue.city + ", " + region);
-                    outputData("Date: " + dateFormat(concertInfo[i].datetime, "mm/dd/yyyy"));
-                }
-            }
-        })
-}
-// You will utilize the node-spotify-api package in order to retrieve song information from the Spotify API.
-
-
-// The Spotify API requires you sign up as a developer to generate the necessary credentials. You can follow these steps in order to generate a client id and client secret:
-
-var spotify = new Spotify(keys.spotify); {
-    id: < 2634 fe2bd92b4a679078292c8734b18d > ,
-    secret: < fee2db7f37ac4ba18c0e6bcd1c8f3436 >
-});
-
-spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
-    if (err) {
-        return console.log('Error occurred: ' + err);
-    }
-
-    console.log(data);
-});
-
-// axious Performing GET request
-const axios = require('axios');
-
-// Make a request for a user with a given ID
-axios.get('/user?ID=12345')
-    .then(function(response) {
-        // handle success
-        console.log(response);
-    })
-    .catch(function(error) {
-        // handle error
-        console.log(error);
-    })
-    .finally(function() {
-        // always executed
-    });
-
-// Optionally the request above could also be done as
-axios.get('/user', {
-        params: {
-            ID: 12345
+            console.log(dataLine1);
+            console.log(dataLine2);
+            console.log(dataLine3);
+            console.log(dataLine4);
+            console.log(dataLine5);
+            console.log(dataLine6);
+            console.log(dataLine7);
+            console.log(dataLine8);
+            logFile();
         }
-    })
-    .then(function(response) {
-        console.log(response);
-    })
-    .catch(function(error) {
-        console.log(error);
-    })
-    .finally(function() {
-        // always executed
     });
+};
 
-// Want to use async/await? Add the `async` keyword to your outer function/method.
-async function getUser() {
-    try {
-        const response = await axios.get('/user?ID=12345');
-        console.log(response);
-    } catch (error) {
-        console.error(error);
-    }
-}
-// axios Performing a POST request
-axios.post('/user', {
-        firstName: 'Fred',
-        lastName: 'Flintstone'
+function doWhat() {
+    fs.readFile("random.txt", "utf8", function(error, data) {
+        if (error) {
+            return console.log(error);
+        }
+        var dataArr = data.split(",");
+        command = dataArr[0];
+        searchItem = dataArr[1];
+        spotifyThis();
     })
-    .then(function(response) {
-        console.log(response);
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
+};
 
-//   axios Performing multiple concurrent requests
-function getUserAccount() {
-    return axios.get('/user/12345');
-}
+function logFile() {
+    fs.appendFile("log.txt", "\r\n" + commandLine + "\r\n" + dataLine1 + "\r\n" + dataLine2 + "\r\n" + dataLine3 + "\r\n" +
+        dataLine4 + "\r\n" + dataLine5 + "\r\n" + dataLine6 + "\r\n" + dataLine7 + "\r\n" + dataLine8, (function(error) {
+            if (error) {
+                return console.log(error);
+            }
 
-function getUserPermissions() {
-    return axios.get('/user/12345/permissions');
-}
+        });
+    };
 
-axios.all([getUserAccount(), getUserPermissions()])
-    .then(axios.spread(function(acct, perms) {
-        // Both requests are now complete
-    }));
+

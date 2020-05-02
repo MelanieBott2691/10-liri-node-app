@@ -2,8 +2,71 @@
 
 # LIRI Bot
 
-Overview
-- Create LIRI, similar to iPhone's SIRI. While SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
+#### About
+- In this assignment I made LIRI, which is similar to iPhone's SIRI (Speech Interpretation and Recognition Interface). LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
+
+#### Resources
+###### Getting Started
+The following dependecines have been installed (-npm install):
+- axios 
+ - makes HTTP requests
+- dotenv
+  - hides API keys
+- moment
+  - formats times
+- node-spotify-api
+  - retrieves song information
+- OMDB API
+  - retriees movie information
+- Bands in Town API
+  - retrieves show information
+- package json file
+  - returns upcoming shows, album information, production details and reads the random.txt file and inputs the informaiton to the console
+
+#### Expected Outcomes
+LITI Bot is designed to take in one of the following commands and produce different search results:
+- node liri.js concert-this
+    - "artists/band name"
+        - Name of venue
+        - Venue lcation
+        - Date of the event in MM/DD/YYYY format
+
+- node liri.js spotify-this-song
+  - "song/track name"
+    - Artist(s)
+    - Song
+    - Spotify song preview url
+    - Album
+
+- node liri.js movie-this
+  - "movie title"
+    - Title of the movie
+    - Year the movie came out
+    - IMDB Rating of the movie
+    - Rotten Tomatoes Rating of the movie
+    - Country where the movie was produced
+    - Language of the movie
+    - Plot of the movie
+    - Actors in the movie
+
+- node liri.js do-what-it-says
+  - Print the spotify results for "I Want it That Way" stored in random.txt 
+
+
+
+
+
+
+-------
+###### Each Command Should Do the Following:
+
+1. Concert-this
+  - This will search the Bands in Town Artist Events API ("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp") for an artist and render the following information about each event to the terminal:
+
+- Name of the venue
+- Venue location
+- Date of the Event (use moment to format this as "MM/DD/YYYY")
+
 
 - LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 
