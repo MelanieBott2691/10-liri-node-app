@@ -5,8 +5,12 @@
   "main": "node.js",
   "dependencies": {
     "axios": "^0.19.2",
+    "core-js": "^3.6.5",
     "dotenv": "^8.2.0",
-    "node-spotify-api": "^1.1.1"
+    "formidable": "^1.2.2",
+    "fs": "0.0.1-security",
+    "node-spotify-api": "^1.1.1",
+    "spotify-web-api-node": "^4.0.0"
   },
   "devDependencies": {},
   "scripts": {
