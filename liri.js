@@ -4,6 +4,9 @@ var keys = require('./keys.js');
 var fs = require("fs");
 var Spotify = require("node-spotify-api");
 var axios = require("axios");
+// var userInput = "";
+// var nextUserInput = "";
+
 // var request = require("request");
 // var imdb = require("imbd-api");
 
@@ -25,8 +28,7 @@ var concert = function() {
 
         /* if the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody' */
         if (!search) {
-            search = "Celine Dion";
-            console.log("If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
+            search = "Ellie Goulding";
         }
 
         // This line is just to help us debug against the actual URL.
@@ -41,7 +43,7 @@ var concert = function() {
                     'Location ' + response.data[0].venue.city + ", " + response.data[i].venue.region,
                     'Date: ' + moment(response.data[0].datetime).format("MM DD, YYYY"),
                 ].join('\n');
-                fs.appendFile('log.txt', concertInfo + '\n\n', function(err) {
+                fs.appendFile('./log.txt', concertInfo + '\n\n', function(err) {
                     if (err) {
                         throw err;
                     }
@@ -88,7 +90,7 @@ var song = function() {
                         // console.log(`Check out "${track}" off of the album '${album}' by '${artists}' here: ${preview}`);
                         console.log("\n---------------------"),
                     ].join('\n');
-                    fs.appendFile('log.txt', songInfo + '\n\n', function(err) {
+                    fs.appendFile('./log.txt', songInfo + '\n\n', function(err) {
                         if (err) {
                             throw err;
                         }
@@ -141,7 +143,7 @@ var movie = function() {
                     'Plot: ' + response.data[0].Plot,
                     'Actors: ' + response.data[0].Actors,
                 ].join('\n');
-                fs.appendFile('log.txt', movieInfo + '\n\n', function(err) {
+                fs.appendFile('./log.txt', movieInfo + '\n\n', function(err) {
                     if (err) {
                         throw err;
                     }
@@ -156,41 +158,22 @@ var movie = function() {
  * using the fs node package, LIRI will take the text inside or random.txt and use it to call one of LIRI's commands.
  ** it should run spotify-this-song for "I Want it That Way"
  ** Edit the text in random.text to test out the feature for movie-this and concert-this */
-// var doWhat = function() {
-//     this.doWhatItSays = function()
-//     fs.readFile("random.txt", "uft8", function (err, data) {
-//         if(!err);
-//         console.log(data.toString());
-//         var cmds = data.toString().split(',');
+
+// if (userCommand == "do-what-it-says") {
+//     var fs = require("fs");
+//     //read random.txt file
+//     fs.readFile('./random.txt', "utf8", function(err, data) {
+//         if (err) {
+//             return console.log(err)
+//         }
+//         //split data into array
+//         var textArr = data.split(",");
+//         userCommand = textArr[0];
+//         userInput = textArr[1];
+//         nextUserInput = userInput.replace(/%20/g, " ");
+//         runLiri();
 //     });
 // }
-
-// ------
-// function doThing(){
-//     fs.readFile('random.txt', "utf8", function(error, data){
-//       var txt = data.split(',');
-
-//       spotifyThisSong(txt[1]);
-//     });
-//   }
-// ----
-
-if (userCommand == "do-what-it-says") {
-    var fs = require("fs");
-    //read random.txt file
-    fs.readFile('random.txt', "utf8", function(err, data) {
-        if (err) {
-            return console.log(err)
-        }
-        //split data into array
-        var textArr = data.split(",");
-        userCommand = textArr[0];
-        userInput = textArr[1];
-        nextUserInput = userInput.replace(/%20/g, " ");
-        runLiri();
-    });
-}
-
 
 // ============================== BONUS ==================================== //
 // ----------------------------- log.txt ---------------------------------- //
@@ -198,3 +181,6 @@ if (userCommand == "do-what-it-says") {
  *in addition to logging the data to the terminal/bash window, output the data to a .txt file called log.txt
  * make sure you append each commands you run
  * do not overwrite your file each time you run a command */
+module.exports = concert;
+module.exports = song;
+module.exports = movie;
