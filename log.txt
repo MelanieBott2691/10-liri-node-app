@@ -529,3 +529,13 @@ Album: The Hits--Chapter One
 
 
 
+
+---------------------------------------------
+Movie Title: Onward
+Year Released: 2020
+IMBDRating: undefined
+Rotten Tomatoes Rating: 88%
+Country Produced: USA
+Plot: Two elven brothers embark on a quest to bring their father back for one day.
+Actors: Tom Holland, Chris Pratt, Julia Louis-Dreyfus, Octavia Spencer
+
