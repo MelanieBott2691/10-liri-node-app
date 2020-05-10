@@ -88,6 +88,12 @@ LITI Bot is designed to take in one of the following commands and produce differ
 - .env
 - README.md
 
+### Movie This
+### Concert This
+### Spotify This
+### Do What It Says
+#### Log
+
 ## Screenshot Images of LIRI BOT
 
 ##### Concert This
