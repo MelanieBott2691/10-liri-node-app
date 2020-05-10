@@ -94,32 +94,32 @@ LITI Bot is designed to take in one of the following commands and produce differ
 ![](/examples/moviesscreenshot.png)
 
 <video width="600" controls>
-<source src="moviethis.mov" type="video/mov></video>
+<source src="moviethis2.mov" type="video/mov></video>
 
 #### Concert This
 ![](/examples/concertscreenshot.png)
 
 <video width="600" controls>
-<source src="concertthis.mov" type="video/mov></video>
+<source src="concertthis2.mov" type="video/mov></video>
 
 #### Spotify This
 ![](/examples/spotify2.png)
 ![](/examples/spotify1.png)
 
 <video width="600" controls>
-<source src="/examples/spotifysong.mov" type="video/mov></video>
+<source src="/examples/spotifysong2.mov" type="video/mov></video>
 
 #### Do What It Says
 ![](/examples/do1.png)
 ![](/examples/do2.png)
 
 <video width="400" controls>
-<source src="/examples/dowhatitsays.mov" type="video/mov></video>
+<source src="/examples/dowhatitsays2.mov" type="video/mov></video>
 
 #### Log
 ![](/examples/logscreenshot.png)
 
 <video width="600" controls>
-<source src="logtxt.mov" type="video/mov></video>
+<source src="logtxt.mov2" type="video/mov></video>
  
 
