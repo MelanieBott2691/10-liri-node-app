@@ -87,3 +87,38 @@ LITI Bot is designed to take in one of the following commands and produce differ
 - .DS_Store
 - .env
 - README.md
+
+## Screenshot Images of LIRI BOT
+
+##### Concert This
+![Command Line](/examples/concertscreenshot.png)
+
+ <video width="600" controls>
+ <source src="concertthis.mov" type="video/mov></video>
+
+##### Movie This
+![Command Line](/examples/moviesscreenshot.png)
+
+ <video width="600" controls>
+ <source src="moviethis.mov" type="video/mov></video>
+
+##### Do What It Says
+![Command Line](/examples/do1.png)
+![Command Line](/examples/do2.png)
+
+ <video width="400" controls>
+ <source src="/examples/dowhatitsays.mov" type="video/mov></video>
+
+###### Log
+![Command Line](/examples/logscreenshot.png)
+
+ <video width="600" controls>
+ <source src="logtxt.mov" type="video/mov></video>
+                                
+###### Spotify This
+![Command Line](/examples/spotify2.png)
+![Command Line](/examples/spotify1.png)
+
+ <video width="600" controls>
+ <source src="/examples/spotifysong.mov" type="video/mov></video>
+
