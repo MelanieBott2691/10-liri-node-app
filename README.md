@@ -88,11 +88,22 @@ LITI Bot is designed to take in one of the following commands and produce differ
 - .env
 - README.md
 
-### Movie This
-### Concert This
-### Spotify This
-### Do What It Says
+#### Movie This
+![](/examples/moviesscreenshot.png)
+
+#### Concert This
+![](/examples/concertscreenshot.png)
+
+#### Spotify This
+![](/examples/spotify2.png)
+![](/examples/spotify1.png)
+
+#### Do What It Says
+![](/examples/do1.png
+![](/examples/do2.png)
+
 #### Log
+![](/examples/logscreenshot.png)
 
 ## Screenshot Images of LIRI BOT
 
