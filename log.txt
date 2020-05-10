@@ -420,3 +420,112 @@ Album: Stupid Love
 
 
 
+
+---------------------------------------------
+Venue: Picture Drome, Holmfirth
+Location Yeadon, 
+Date: 06/04/2020
+
+
+---------------------------------------------
+Venue: Concord Pavilion
+Location Concord, CA
+Date: 05/15/2020
+
+
+---------------------------------------------
+Movie Title: Mr. Nobody
+Year Released: 2009
+IMBDRating: undefined
+Rotten Tomatoes Rating: 67%
+Country Produced: Belgium, Germany, Canada, France, UK, Luxembourg
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+
+---------------------------------------------
+Movie Title: Jumanji
+Year Released: 1995
+IMBDRating: undefined
+Rotten Tomatoes Rating: 54%
+Country Produced: USA
+Plot: When two kids find and play a magical board game, they release a man trapped in it for decades--and a host of dangers that can only be stopped by finishing the game.
+Actors: Robin Williams, Jonathan Hyde, Kirsten Dunst, Bradley Pierce
+
+
+---------------------------------------------
+Movie Title: Sonic the Hedgehog
+Year Released: 2020
+IMBDRating: undefined
+Rotten Tomatoes Rating: 64%
+Country Produced: USA, Japan, Canada
+Plot: After discovering a small, blue, fast hedgehog, a small-town police officer must help it defeat an evil genius who wants to do experiments on it.
+Actors: Ben Schwartz, James Marsden, Jim Carrey, Tika Sumpter
+
+
+---------------------------------------------
+Movie Title: Trolls World Tour
+Year Released: 2020
+IMBDRating: undefined
+Rotten Tomatoes Rating: 74%
+Country Produced: USA
+Plot: Poppy and Branch discover that they are but one of six different Troll tribes scattered over six different lands devoted to six different kinds of music: Funk, Country, Techno, Classical, ...
+Actors: Anna Kendrick, Justin Timberlake, Rachel Bloom, James Corden
+
+
+---------------------------------------------
+Artists: Ace of Base
+Track: The Sign
+Preview: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=2634fe2bd92b4a679078292c8734b18d
+Album: The Sign
+
+
+
+
+---------------------------------------------
+Artists: Kygo
+Track: Like It Is
+Preview: https://p.scdn.co/mp3-preview/27ec907b86d99706624f64c0642bd4dcb9a7fd2a?cid=2634fe2bd92b4a679078292c8734b18d
+Album: Like It Is
+
+
+
+
+---------------------------------------------
+Movie Title: Mr. Nobody
+Year Released: 2009
+IMBDRating: undefined
+Rotten Tomatoes Rating: 67%
+Country Produced: Belgium, Germany, Canada, France, UK, Luxembourg
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+
+---------------------------------------------
+Movie Title: Now You See Me
+Year Released: 2013
+IMBDRating: undefined
+Rotten Tomatoes Rating: 50%
+Country Produced: USA, France
+Plot: An F.B.I. Agent and an Interpol Detective track a team of illusionists who pull off bank heists during their performances, and reward their audiences with the money.
+Actors: Jesse Eisenberg, Mark Ruffalo, Woody Harrelson, Isla Fisher
+
+
+---------------------------------------------
+Movie Title: Now You See Me 2
+Year Released: 2016
+IMBDRating: undefined
+Rotten Tomatoes Rating: 34%
+Country Produced: France, USA
+Plot: The Four Horsemen resurface, and are forcibly recruited by a tech genius to pull off their most impossible heist yet.
+Actors: Jesse Eisenberg, Mark Ruffalo, Woody Harrelson, Dave Franco
+
+
+---------------------------------------------
+Artists: Backstreet Boys
+Track: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=2634fe2bd92b4a679078292c8734b18d
+Album: The Hits--Chapter One
+
+
+

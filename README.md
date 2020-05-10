@@ -43,12 +43,16 @@ LITI Bot is designed to take in one of the following commands and produce differ
         - Venue lcation
         - Date of the event in MM/DD/YYYY format
 
+<video src="concertthis.mov" poster="concertscreenshot.png" width="320" height="200" controls preload></video>
+
 - node liri.js spotify-this-song
   - "song/track name"
     - Artist(s)
     - Song
     - Spotify song preview url
     - Album
+
+<video src="spotifysong.mov" poster="concertscreenshot.png" width="320" height="200" controls preload></video>
 
 - node liri.js movie-this
   - "movie title"
@@ -61,8 +65,14 @@ LITI Bot is designed to take in one of the following commands and produce differ
     - Plot of the movie
     - Actors in the movie
 
+<video src="moviethis.mov" poster="moviescreenshot.png" width="320" height="200" controls preload></video>
+
 - node liri.js do-what-it-says
   - Reads commands from random.txt file. The default contains the "spotify-this-song" command with "I Want it That Way", but this command can be changed to any commands above.
+
+<video src="dowhatitsays.mov" poster="concertscreenshot.png" width="320" height="200" controls preload></video>
+
+<video src="logtxt.mov" poster="logscreenshot.png" width="320" height="200" controls preload></video>
 
 ##### Files Used
 - liri.js
