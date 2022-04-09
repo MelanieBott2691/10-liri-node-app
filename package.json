@@ -9,7 +9,7 @@
     "dotenv": "^8.2.0",
     "formidable": "^1.2.2",
     "fs": "0.0.1-security",
-    "moment": "^2.25.1",
+    "moment": "^2.29.2",
     "node-spotify-api": "^1.1.1",
     "request": "^2.88.2",
     "spotify-web-api-node": "^4.0.0"
